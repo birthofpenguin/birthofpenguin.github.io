@@ -1,0 +1,113 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    background: white;
+}
+
+:root {
+    --darkb: #27489B;
+    --lightb: #269AD6;
+}
+
+
+.heading {
+    font-size: 3.5vh;
+    margin-bottom: 2vh;
+    font-weight: bold;
+    color: white; /* Set the font color to white */
+    text-shadow: 0 0 10px rgb(109, 75, 213), 0 0 20px rgb(219, 29, 29);
+    animation: slideFromTop 1s ease-in-out forwards, textShadowChange 1s alternate;
+}
+
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(-50px); /* Start from above */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* End at normal position */
+        opacity: 1;
+    }
+}
+
+@keyframes textShadowChange {
+    0% {
+        text-shadow: 0 0 10px rgb(42, 253, 133), 0 0 20px rgb(21, 255, 56);
+    }
+    50% {
+        text-shadow: 0 0 10px rgb(109, 75, 213), 0 0 20px rgb(219, 29, 29);
+    }
+    100% {
+        text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(255, 255, 0);
+    }
+}
+
+
+
+.video-bg {
+    height: 50vh;
+}
+
+.button {
+    padding: 5px 15px;
+    margin-top: 2vh;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #f93e9b;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.wishing-text {
+    display: none;
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #ffeb3b;
+    animation: fadeIn 2s ease-in-out;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+
+
+.wishing-card {
+    display: none;
+    background-color: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+

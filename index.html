@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Penguin</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading" class="heading">Happy Birthday Penguin</h1>
+        <video id="video-bg" class="video-bg" autoplay muted loop>
+            <source src="pen.mp4" type="video/mp4">
+            PENGUIN!
+        </video>
+
+        <button id="tap-button" class="button" onclick="changeContent()">Chal Aage Nikal➡️</button>
+        <div id="image-container" class="image-container" style="display: none;"></div>
+
+
+        <div id="wishing-card" class="wishing-card" style="display: none;">
+            <h2 style="font-size: 3.7vh;">🎉 Wishing You the Happiest Birthdayy! 🎉</h2>
+            <br>
+            <p style="font-size: 3vh;">May the sorrow never enter your life, and your life get filled with Joy</p>
+            <p style="font-size: 3vh;">Tensions stay far away, And never in your life can enter a Toxic Boy</p>
+            <br>
+            <p style="font-size: 3vh;">Your jokes are dark as much as the Black Hole</p>
+            <p style="font-size: 3vh;">You are the Penguin, so go back to the North Pole</p>
+            <br>
+            <p style="font-size: 3.5vh;">No Party - No Gift</p>
+            <br>
+            <p style="font-size: 2.8vh;">Happy Birthday Once Again!🐧</p>
+            <br>
+            <p style="font-size: 1.8vh;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~Your Handsome Friend🫠</p>
+        </div>
+    </div>
+
+    <audio id="birthday-audio" src="hp.mp3" autoplay></audio>
+
+    <script>
+        let clickCount = 0;
+
+        function changeContent() {
+            const heading = document.getElementById('heading');
+            const video = document.getElementById('video-bg');
+            const imageContainer = document.getElementById('image-container');
+            const wishingCard = document.getElementById('wishing-card');
+            const button = document.getElementById('tap-button');
+
+            clickCount++;
+
+            if (clickCount === 1) {
+                heading.style.display = 'none';
+                video.style.display = 'none';
+                imageContainer.style.display = 'block';
+                imageContainer.innerHTML = '<img src="funimg.jpg" alt="First Surprise Image" style="width: 100%; max-width: 800px; margin-top: 1vh;">' +
+                                           '<p style="font-size: 2.5vh; align-content: center; height: 5vh; background-color: #f93e9b">May you Stay GORGEOUS just like this</p>';
+            } else if (clickCount === 2) {
+                imageContainer.innerHTML = '<img src="img.jpg" alt="Second Surprise Image" style="width: 100%; max-width: 800px; margin-top: 1vh;"">' +
+                                           '<p style="font-size: 2.5vh; align-content: center; height: 5vh; background-color: #f93e9b">May your Smile never fade away♥ :)</p>';
+            } else if (clickCount === 3) {
+                imageContainer.style.display = 'none';
+                wishingCard.style.display = 'block';
+                button.style.display = 'none';
+
+                document.body.style.backgroundImage = 'url("heart.jpg")';
+                document.body.style.backgroundSize = 'cover';  // Optional: Ensures the image covers the whole body
+                document.body.style.backgroundPosition = 'center';  // Optional: Centers the image
+            }
+        }
+    </script>
+</body>
+</html>
